@@ -1,0 +1,30 @@
+const Noded = function(value,next = null){
+	this.value = value;
+	this.next  = next;
+}
+
+const LinkedList = function(){
+	this.head = null;
+	this.tail = null;
+	this.length = 0;
+}
+
+LinkedList.prototype.add = function(value){
+	this.head = new Noded(value,this.head)
+	this.length += 1;
+}
+
+LinkedList.prototype.print = function(){
+	let length = this.length;
+	let currentNode = this.head;
+	while(length--){
+		console.log(currentNode.value)
+		currentNode = currentNode.next;
+	}
+}
+
+const myList = new LinkedList();
+
+myList.add(20);
+myList.add(30);
+myList.print();
