@@ -1,4 +1,4 @@
-const merge = function(leftArray,rightArray){
+const merge = function(leftArray,rightArray){ //testing
 	const newArray = [];
 	while(leftArray.length && rightArray.length){
 		if(leftArray[0] < rightArray[0]){
